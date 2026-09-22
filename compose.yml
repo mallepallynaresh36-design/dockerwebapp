@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   devopsdb:
-    image: nareshmallepalli006/dockerapp:v1
+    image: nareshmallepalli006/dockerapp:v2
     ports:
       - "3306:3306"
     deploy:
@@ -11,9 +11,9 @@ services:
       - mynetwork
 
   application:
-    image: nareshmallepalli006/dockerapp:v2
+    image: nareshmallepalli006/dockerapp:v1
     ports:
-      - "1111:8080"
+      - "2222:8080"
     deploy:
       replicas: 3
     depends_on:
